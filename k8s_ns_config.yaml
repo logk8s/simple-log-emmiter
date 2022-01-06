@@ -1,0 +1,8 @@
+#use this command to run: kubectl apply -f k8s_config.yaml
+apiVersion : v1
+kind: Namespace
+metadata:
+  name: emitters
+  labels:
+    name: emitters
+
