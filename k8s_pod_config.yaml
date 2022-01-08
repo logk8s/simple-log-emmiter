@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: emitter
+  namespace: emitters
+  labels:
+    name: emitter
+spec:
+  containers:
+  - name: emitter
+    image: logk8s/emmiter:1.0
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - name: http
+        protocol: TCP
+        containerPort: 3010
